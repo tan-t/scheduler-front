@@ -1,0 +1,28 @@
+{
+  "name": "schedule-serverless",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest --forceExit --coverage",
+    "watch": "jest --watchAll",
+    "build": "tsc"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "kuromoji": "^0.1.2",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "nodemon": "^1.13.0",
+    "shelljs": "^0.8.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.3",
+    "@types/kuromoji": "^0.1.0",
+    "@types/lodash": "^4.14.123",
+    "jest": "^22.0.4",
+    "supertest": "^3.0.0",
+    "ts-jest": "^22.0.4",
+    "ts-node": "^5.0.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  }
+}
