@@ -8,10 +8,6 @@ describe('NearTemporalAcceptor', () => {
     expect(target.hasNext(Token.of('１月'))).toBeTruthy();
   });
 
-  it('returns next when given 今日', () => {
-    expect(target.hasNext(Token.of('今日'))).toBeTruthy();
-  });
-
   it('returns next when given 月曜日', () => {
     expect(target.hasNext(Token.of('月曜日'))).toBeTruthy();
   });

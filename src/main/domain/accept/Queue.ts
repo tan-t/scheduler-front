@@ -15,6 +15,10 @@ export default class Queue {
     this.queue = _.concat(_.initial(this.queue),Queue.tryMerge(_.last(this.queue),elem));
   }
 
+  public getElements():Array<Element> {
+    return _.cloneDeep(this.queue);
+  }
+
   private static isMergeable(oper:Operator | Mergeable ): oper is Mergeable {
     return (<Mergeable>oper).merge !== undefined;
   }

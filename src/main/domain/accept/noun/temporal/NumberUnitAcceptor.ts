@@ -12,11 +12,12 @@ export default class NumberUnitAcceptor extends AbsNumberAcceptor {
 
   accept(token: Token): Array<Element> {
     const ret:Array<Element> = [];
+    const num = super.accept(token);
     const units = this.acceptUnit(token);
-    if(units.length === 0){
+    if(units.length === 0 || num.length === 0){
       return [];
     }
-    ret.push(...super.accept(token));
+    ret.push(...num);
     ret.push(...units);
     return ret;
   }
