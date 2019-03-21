@@ -6,7 +6,7 @@
     "test": "jest --forceExit --coverage",
     "deploy": "firebase deploy --only functions"
   },
-  "main": "dist/platform/firebase/index.js",
+  "main": "dist/main/platform/firebase/index.js",
   "dependencies": {
     "firebase-admin": "~5.12.1",
     "firebase-functions": "^1.0.3",
