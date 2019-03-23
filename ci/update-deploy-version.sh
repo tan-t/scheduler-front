@@ -5,7 +5,7 @@ fi
 
 if [ "$TRAVIS_BRANCH" == "firebase" ] || [ "$TRAVIS_BRANCH" == "firebase-staging" ] ; then
 sudo apt-get update
-sudo apt-get install -y rubygems
+sudo apt-get install -y rubygems-integration
 sudo gem install hub
 
 DEPLOY_TARGET_ENV=${TRAVIS_BRANCH}
