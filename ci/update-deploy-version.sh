@@ -1,4 +1,8 @@
 #!/bin/bash -e
+if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+exit 0
+fi
+
 if [ "$TRAVIS_BRANCH" == "firebase" ] || [ "$TRAVIS_BRANCH" == "firebase-staging" ] ; then
 sudo apt-get update
 sudo apt-get install -y rubygems
