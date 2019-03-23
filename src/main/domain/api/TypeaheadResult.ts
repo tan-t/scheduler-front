@@ -1,6 +1,6 @@
 import * as moment from "../../../../node_modules/moment";
 
-moment.lang('ja');
+moment.locale('ja');
 
 export default class TypeaheadResult { 
     value:moment.Moment;

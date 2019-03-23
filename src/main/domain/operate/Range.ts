@@ -26,7 +26,6 @@ export default class Range {
       this.startDate = YearMonthDate.clone(d);
     }
     this.endDate = YearMonthDate.clone(d);
-    console.log(this);
   }
 
   filter(date: Moment): boolean {

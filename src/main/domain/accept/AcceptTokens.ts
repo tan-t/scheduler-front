@@ -13,7 +13,6 @@ export default class AcceptTokens {
   }
 
   public acceptTokens(tokens:Array<Token>):Result {
-    console.log(tokens);
     const queue = new Queue();
     const errors:Array<Token> = [];
     tokens.forEach(token=>{
