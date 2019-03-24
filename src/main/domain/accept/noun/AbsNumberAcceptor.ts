@@ -6,7 +6,7 @@ import { NumberOperator } from "@domain/operate/Operator";
 export  default abstract class AbsNumberAcceptor implements Acceptor {
 
   accept(token:Token):Array<Element>{
-    const numbers = AbsNumberAcceptor.toHankaku(token.basic_form).match(/(\d+)/g);
+    const numbers = AbsNumberAcceptor.toHankaku(token.surface_form).match(/(\d+)/g);
     if(!numbers) {
       return [];
     }
@@ -14,7 +14,7 @@ export  default abstract class AbsNumberAcceptor implements Acceptor {
   };
 
   hasNext(token:Token):boolean{
-    return !AbsNumberAcceptor.containsNumber(token.basic_form);
+    return !AbsNumberAcceptor.containsNumber(token.surface_form);
   };
 
   public static containsNumber(str:string):boolean{

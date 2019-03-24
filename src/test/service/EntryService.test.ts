@@ -29,4 +29,8 @@ describe('EntryService',()=>{
     return target.entry('１月,２月').then(ret=>expect(ret).toEqual({queue:{queue:[{operator:new NumberOperator(1)},{operator:new UnitOperator(Unit.MONTH)},{operator:new EnumrateOperator()},{operator:new NumberOperator(2)},{operator:new UnitOperator(Unit.MONTH)}]},errors:[]}));
   })
 
+  it('should be able to parse a multiple number in raw',async () => {
+    return target.entry('29').then(ret=>expect(ret).toEqual({queue:{queue:[{operator:new NumberOperator(29)}]},errors:[]}));
+  })
+
 });

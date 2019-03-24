@@ -24,4 +24,8 @@ describe('OperateDates',()=>{
     expect(target.operate([new NumberOperator(1),new UnitOperator(Unit.MONTH),new NumberOperator(1),new RangeFromOperator(),new NumberOperator(3)],moment([2019,0,1]))).toEqual([moment([2019,0,1]),moment([2019,0,2]),moment([2019,0,3])]);
   });
 
+  it('should return 2019-08-29 given 29 with basedate 2018-08-01',()=>{
+    expect(target.operate([new NumberOperator(29)],moment([2018,7,1]))).toEqual([moment([2018,7,29])]);
+  });
+
 });
